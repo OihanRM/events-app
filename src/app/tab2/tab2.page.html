@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Nuevo evento
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <form>
+    <ion-item>
+      <ion-label>Speaker</ion-label>
+      <ion-input type="text" name="speaker"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input type="text" name="title"></ion-input>
+    </ion-item>
+      <ion-label>Place</ion-label>
+      <ion-select>
+        <ion-select-option value="Bilbao">Bilbao</ion-select-option>
+        <ion-select-option value="Madrid">Madrid</ion-select-option>
+        <ion-select-option value="Barcelona">Barcelona</ion-select-option>
+      </ion-select>
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+      </ion-item>
+      <ion-button expand="full" color="primary" type="submit" block>Añadir</ion-button>
+  </form>
 </ion-content>

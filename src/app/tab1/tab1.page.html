@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Eventos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="Welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Eventos</ion-card-subtitle>
+      <ion-card-title>Bienvenidos a Eventos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Consulte a continuación el listado de eventos posibles</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Lista de eventos</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let item of eventos">
+    <ion-label>{{item.speaker}}</ion-label>
+    <ion-label>{{item.title}}</ion-label>
+    </ion-item> 
+  </ion-list>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
