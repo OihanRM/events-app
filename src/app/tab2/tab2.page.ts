@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  evento = {id: -1, speaker: 'yo', title: 'algo', place: 'Bilbao', date: '2024'};
+  evento = {id: -1, speaker: '', title: '', place: '', date: ''};
 
   constructor(private eventosService : EventosService, private router:Router) {}
 

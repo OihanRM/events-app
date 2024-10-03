@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Editar Datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label >Evento seleccionado</ion-label>
+  <form (ngSubmit)="enviarFormulario()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="title" [(ngModel)]="event.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Speaker</ion-label>
+      <ion-input type="text" name="speaker" [(ngModel)]="event.speaker"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">place</ion-label>
+      <ion-input type="text" name="place" [(ngModel)]="event.place"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button expand="full" color="primary" type="submit" block>Editar</ion-button>
+    </ion-item>   
+  </form>
+
+</ion-content>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { setThrowInvalidWriteToSignalError } from '@angular/core/primitives/signals';
 
 export interface Event {
   id: number;
@@ -63,6 +64,9 @@ export class EventosService {
   {
     //delete from events where id = evento.id
     this.events = this.events.filter(e => e.id !== evento.id);
+  }
+  editEvent(evento: Event){
+    this.events = this.events.map(e => e.id === evento.id ? evento : e);
   }
 
 }
