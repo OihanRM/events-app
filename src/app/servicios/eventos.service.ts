@@ -56,6 +56,8 @@ export class EventosService {
   {
     let nuevoEvento = {id: this.events.length, speaker: evento.speaker, title: evento.title, place: evento.place, date: evento.date};
     this.events.push(nuevoEvento);
+    //volver a la vista anterior
+    
   }
 
 }
