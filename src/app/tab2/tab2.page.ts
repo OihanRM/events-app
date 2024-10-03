@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EventosService } from '../servicios/eventos.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  evento = {id: -1, speaker: 'yo', title: 'algo', place: 'Bilbao', date: '2024'};
 
-  constructor() {}
+  constructor(private eventosService : EventosService) {}
 
+  enviarFormulario() {
+    console.log(this.evento);
+    this.eventosService.addEvent(this.evento);
+  }
 }

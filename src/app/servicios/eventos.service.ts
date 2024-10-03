@@ -47,10 +47,15 @@ export class EventosService {
 
     ];
   }
-  
+
   searchData()
   {
     return this.events;
+  }
+  addEvent(evento: Event)
+  {
+    let nuevoEvento = {id: this.events.length, speaker: evento.speaker, title: evento.title, place: evento.place, date: evento.date};
+    this.events.push(nuevoEvento);
   }
 
 }

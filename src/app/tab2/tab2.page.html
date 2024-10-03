@@ -7,14 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <form>
+  <form (ngSubmit)="enviarFormulario()">
     <ion-item>
       <ion-label>Speaker</ion-label>
-      <ion-input type="text" name="speaker"></ion-input>
+      <ion-input type="text" name="speaker" [(ngModel)]="evento.speaker"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Title</ion-label>
-      <ion-input type="text" name="title"></ion-input>
+      <ion-input type="text" name="title" [(ngModel)]="evento.title"></ion-input>
     </ion-item>
       <ion-label>Place</ion-label>
       <ion-select>
