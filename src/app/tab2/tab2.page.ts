@@ -13,7 +13,6 @@ export class Tab2Page {
   constructor(private eventosService : EventosService, private router:Router) {}
 
   enviarFormulario() {
-    console.log(this.evento);
     this.eventosService.addEvent(this.evento);
     this.evento = {id: -1, speaker: '', title: '', place: '', date: ''};
     this.router.navigate(['/tabs']);
