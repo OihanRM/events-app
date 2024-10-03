@@ -59,5 +59,10 @@ export class EventosService {
     //volver a la vista anterior
     
   }
+  deleteEvent(evento: Event)
+  {
+    //delete from events where id = evento.id
+    this.events = this.events.filter(e => e.id !== evento.id);
+  }
 
 }
