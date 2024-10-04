@@ -67,6 +67,7 @@ export class EventosService {
   }
   editEvent(evento: Event){
     this.events = this.events.map(e => e.id === evento.id ? evento : e);
+    
   }
 
 }

@@ -26,7 +26,7 @@ export class EditEventPage implements OnInit {
   }
   enviarFormulario(){
     this.eventosService.editEvent(this.event);
-    this.eventosService.searchData();
+    console.log(this.event);
     this.router.navigate(['/tabs/tab4']);
   }
 
