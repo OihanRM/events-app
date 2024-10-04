@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalles de Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>Titulo</ion-label>
+      <ion-input type="text" [(ngModel)]="evento.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Speaker</ion-label>
+      <ion-input type="text" [(ngModel)]="evento.speaker"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-input type="text" [(ngModel)]="evento.date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lugar</ion-label>
+      <ion-input [(ngModel)]="evento.place"></ion-input>
+    </ion-item>  
+
+  </ion-list>
+</ion-content>

@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'edit-event',
     loadChildren: () => import('./edit-event/edit-event.module').then( m => m.EditEventPageModule)
+  },
+  {
+    path: 'tab5',
+    loadChildren: () => import('./tab5/tab5.module').then( m => m.Tab5PageModule)
+  },
+  {
+    path: 'event-details',
+    loadChildren: () => import('./event-details/event-details.module').then( m => m.EventDetailsPageModule)
   }
 ];
 @NgModule({
